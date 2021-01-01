@@ -190,7 +190,7 @@ class LinkPreviewMiddleware(Middleware):
 
         text = msg_text
         if title or desc:
-            text = '\n'.join([msg_text, 'preview'.center(23, '='), title.center(23), '-'*27, str(desc), ])
+            text = '\n'.join([msg_text, '链接预览'.center(21, '='), title.center(23), '-'*29, str(desc), ])
 
         if lp.type.startswith('image') and lp.image:
             suffix = os.path.splitext(lp.image_url)[1]
